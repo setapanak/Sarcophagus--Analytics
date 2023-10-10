@@ -3,7 +3,7 @@ from random import randint
 import secrets
 
 def get_random_password():
-    random_source = string.ascii_letters + string.digits + '-_'
+    random_source = string.ascii_letters + string.digits + '-_@'
     # select 1 lowercase
     password = random.choice(string.ascii_lowercase)
     # select 1 uppercase
