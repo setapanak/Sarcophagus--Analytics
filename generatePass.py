@@ -11,6 +11,7 @@ def get_random_password():
     # select 1 digit
     password += random.choice(string.digits)
     # select 1 special symbol
+    password += random.choice(string.punctuation)
   
    # generate other characters
     for _i in range(4):
