@@ -1,5 +1,6 @@
 import random
 import string
+from random import randint
 
 
 def get_random_password():
@@ -12,9 +13,12 @@ def get_random_password():
     password += random.choice(string.digits)
     # select 1 special symbol
     password += random.choice(string.punctuation)
-  
-   # generate other characters
-    for _i in range(4):
+
+    value = randint(4, 8)
+    #generate random int String size
+
+    # generate other characters
+    for _i in range(value):
         password += random.choice(random_source)
 
     password_list = list(password)
@@ -22,5 +26,6 @@ def get_random_password():
     random.SystemRandom().shuffle(password_list)
     password = ''.join(password_list)
     return password
-  
+
+
 print("Password:", get_random_password())
