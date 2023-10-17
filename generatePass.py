@@ -1,3 +1,11 @@
+import requests
+
+# The API endpoint
+url = "https://jsonplaceholder.typicode.com/posts/1"
+#url = "file:///C:/Users/setap/Desktop/Software%20Design/test/test.html"
+
+# A GET request to the API
+response = requests.get(url)
 import random
 import string
 from random import randint
@@ -28,4 +36,8 @@ def get_random_password():
     return password
 
 
-print("Password:", get_random_password())
+#print("Password:", get_random_password())
+
+# Print the response
+response_json = get_random_password();
+print(response_json)
