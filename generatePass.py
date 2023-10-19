@@ -1,4 +1,8 @@
 import requests
+import random
+import string
+from random import randint
+import secrets
 
 # The API endpoint
 url = "https://jsonplaceholder.typicode.com/posts/1"
@@ -6,10 +10,7 @@ url = "https://jsonplaceholder.typicode.com/posts/1"
 
 # A GET request to the API
 response = requests.get(url)
-import random
-import string
-from random import randint
-import secrets
+
 
 def get_random_password():
     random_source = string.ascii_letters + string.digits + '-_@<>)(&^%$=+}{][|?`!'
